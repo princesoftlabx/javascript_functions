@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Accessing Array</title>
+</head>
+<body>
+    <script>
+        //lets define a empty array
+        let arr = new Array(6);
+        console.log(arr);
+
+        //fill value in array
+        arr[0] = "prince";
+        arr[1] = "Anshul";
+        arr[3] = 15;
+        arr[4] = {name:"prince", city:"delhi", age:"21", occupation:"engineer"};
+        arr[2] = "bhanu";
+        arr[5] = "Thankyou!";
+        console.log(arr);
+
+        //for loop
+        for(i=0; i < arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        //forEach loop
+        arr.forEach(function (array){
+        console.log(array);
+        })
+
+        //forEach Loop with arrow function
+        arr.forEach(e =>{
+            console.log(e);
+        })
+
+        //Array methods push(), pop(), concat(), indexOf(), join(), sort(), shift(), filter() etc.
+
+        arr.push("pushvalue");
+        console.log(arr);
+
+        //pop is used to delete last value from an array
+        arr.pop();
+        console.log(arr);
+
+        //concat method
+        //lets create a new array for this
+        let newArray = new Array(1, 2, 3);
+        newArray = newArray.concat("prince", "himanshu", "anshul");
+        console.log(newArray);
+
+        console.log(newArray.indexOf(1));
+       
+        let hyphen = newArray.join(" - ");
+        console.log(hyphen);
+
+        console.log(newArray.sort());
+
+        //shift is used to delete first value from an array
+        console.log(newArray.shift());
+        console.log(newArray);
+        // console.log(newArray.unshift());
+        // console.log(newArray)
+
+        console.log(newArray.reverse());
+        
+        let myarr = ["prince", "a", "b"];
+        let arr2 = myarr.map(function (item) {
+            return item.toUpperCase();
+        });
+        console.log(arr2);
+        
+        //array filter is used to filter the value
+        let filterString = newArray.filter(arr =>{
+            return typeof arr === "string";
+        });
+        console.log(filterString);
+
+        let filterNumber = newArray.filter(arr =>{
+            return typeof arr === "number";
+        });
+        console.log(filterNumber);
+
+    </script>
+</body>
+</html>
